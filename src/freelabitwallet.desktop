@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Freelabit Wallet
+Comment=Freelabit wallet
+Exec=freelabitwallet
+Terminal=false
+Type=Application
+Icon=freelabit
+MimeType=x-scheme-handler/freelabitwallet;
+Categories=Office;Finance;
