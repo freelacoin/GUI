@@ -103,8 +103,8 @@ static int RSblock_init(RSblock *blocks, int spec[5], unsigned char *data, unsig
 	return 0;
 }
 
-STATIC_IN_RELEASE void QRraw_free(QRRawCode *raw);
-STATIC_IN_RELEASE QRRawCode *QRraw_new(QRinput *input)
+__STATIC void QRraw_free(QRRawCode *raw);
+__STATIC QRRawCode *QRraw_new(QRinput *input)
 {
 	QRRawCode *raw;
 	int spec[5], ret;
@@ -154,7 +154,7 @@ STATIC_IN_RELEASE QRRawCode *QRraw_new(QRinput *input)
  * @param raw raw code.
  * @return code
  */
-STATIC_IN_RELEASE unsigned char QRraw_getCode(QRRawCode *raw)
+__STATIC unsigned char QRraw_getCode(QRRawCode *raw)
 {
 	int col, row;
 	unsigned char ret;
@@ -177,7 +177,7 @@ STATIC_IN_RELEASE unsigned char QRraw_getCode(QRRawCode *raw)
 	return ret;
 }
 
-STATIC_IN_RELEASE void QRraw_free(QRRawCode *raw)
+__STATIC void QRraw_free(QRRawCode *raw)
 {
 	if(raw != NULL) {
 		free(raw->datacode);
@@ -202,8 +202,8 @@ typedef struct {
 	int count;
 } MQRRawCode;
 
-STATIC_IN_RELEASE void MQRraw_free(MQRRawCode *raw);
-STATIC_IN_RELEASE MQRRawCode *MQRraw_new(QRinput *input)
+__STATIC void MQRraw_free(MQRRawCode *raw);
+__STATIC MQRRawCode *MQRraw_new(QRinput *input)
 {
 	MQRRawCode *raw;
 
@@ -245,7 +245,7 @@ STATIC_IN_RELEASE MQRRawCode *MQRraw_new(QRinput *input)
  * @param raw raw code.
  * @return code
  */
-STATIC_IN_RELEASE unsigned char MQRraw_getCode(MQRRawCode *raw)
+__STATIC unsigned char MQRraw_getCode(MQRRawCode *raw)
 {
 	unsigned char ret;
 
@@ -260,7 +260,7 @@ STATIC_IN_RELEASE unsigned char MQRraw_getCode(MQRRawCode *raw)
 	return ret;
 }
 
-STATIC_IN_RELEASE void MQRraw_free(MQRRawCode *raw)
+__STATIC void MQRraw_free(MQRRawCode *raw)
 {
 	if(raw != NULL) {
 		free(raw->datacode);
@@ -406,7 +406,7 @@ unsigned char *FrameFiller_testMQR(int version)
  * QR-code encoding
  *****************************************************************************/
 
-STATIC_IN_RELEASE QRcode *QRcode_new(int version, int width, unsigned char *data)
+__STATIC QRcode *QRcode_new(int version, int width, unsigned char *data)
 {
 	QRcode *qrcode;
 
@@ -428,7 +428,7 @@ void QRcode_free(QRcode *qrcode)
 	}
 }
 
-STATIC_IN_RELEASE QRcode *QRcode_encodeMask(QRinput *input, int mask)
+__STATIC QRcode *QRcode_encodeMask(QRinput *input, int mask)
 {
 	int width, version;
 	QRRawCode *raw;
@@ -516,7 +516,7 @@ EXIT:
 	return qrcode;
 }
 
-STATIC_IN_RELEASE QRcode *QRcode_encodeMaskMQR(QRinput *input, int mask)
+__STATIC QRcode *QRcode_encodeMaskMQR(QRinput *input, int mask)
 {
 	int width, version;
 	MQRRawCode *raw;
