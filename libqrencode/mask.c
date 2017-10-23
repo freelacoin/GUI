@@ -31,7 +31,7 @@
 #include "qrspec.h"
 #include "mask.h"
 
-STATIC_IN_RELEASE int Mask_writeFormatInformation(int width, unsigned char *frame, int mask, QRecLevel level)
+__STATIC int Mask_writeFormatInformation(int width, unsigned char *frame, int mask, QRecLevel level)
 {
 	unsigned int format;
 	unsigned char v;
@@ -185,7 +185,7 @@ unsigned char *Mask_makeMask(int width, unsigned char *frame, int mask, QRecLeve
 //static int n3;
 //static int n4;
 
-STATIC_IN_RELEASE int Mask_calcN1N3(int length, int *runLength)
+__STATIC int Mask_calcN1N3(int length, int *runLength)
 {
 	int i;
 	int demerit = 0;
@@ -218,7 +218,7 @@ STATIC_IN_RELEASE int Mask_calcN1N3(int length, int *runLength)
 	return demerit;
 }
 
-STATIC_IN_RELEASE int Mask_calcN2(int width, unsigned char *frame)
+__STATIC int Mask_calcN2(int width, unsigned char *frame)
 {
 	int x, y;
 	unsigned char *p;
@@ -241,7 +241,7 @@ STATIC_IN_RELEASE int Mask_calcN2(int width, unsigned char *frame)
 	return demerit;
 }
 
-STATIC_IN_RELEASE int Mask_calcRunLengthH(int width, unsigned char *frame, int *runLength)
+__STATIC int Mask_calcRunLengthH(int width, unsigned char *frame, int *runLength)
 {
 	int head;
 	int i;
@@ -269,7 +269,7 @@ STATIC_IN_RELEASE int Mask_calcRunLengthH(int width, unsigned char *frame, int *
 	return head + 1;
 }
 
-STATIC_IN_RELEASE int Mask_calcRunLengthV(int width, unsigned char *frame, int *runLength)
+__STATIC int Mask_calcRunLengthV(int width, unsigned char *frame, int *runLength)
 {
 	int head;
 	int i;
@@ -297,7 +297,7 @@ STATIC_IN_RELEASE int Mask_calcRunLengthV(int width, unsigned char *frame, int *
 	return head + 1;
 }
 
-STATIC_IN_RELEASE int Mask_evaluateSymbol(int width, unsigned char *frame)
+__STATIC int Mask_evaluateSymbol(int width, unsigned char *frame)
 {
 	int x, y;
 	int demerit = 0;
