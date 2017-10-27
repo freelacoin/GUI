@@ -2,7 +2,7 @@
 
 ### On *nix:
 
-Dependencies: GCC 4.7.3 or later, CMake 2.8.6 or later, Boost 1.55 or later, and Qt 5.9 or later.
+Ubuntu/Debian Dependencies: GCC 4.7.3 or later, CMake 2.8.6 or later, Boost 1.55 or later, and Qt 5.9 or later.
 
 You may download them from:
 
@@ -11,9 +11,9 @@ You may download them from:
 - http://www.boost.org/
 - https://www.qt.io
 
-Alternatively, it may be possible to install them using a package manager.
+>> Alternatively, it may be possible to install them using a package manager.
 
-To acquire the source via git and build the release version, run the following commands:
+>> To acquire the source via git and build the release version, run the following commands:
 ```
 cd ~
 sudo apt-get install build-essential git cmake libboost1.58-all-dev qt5-default qttools5-dev-tools
