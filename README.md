@@ -22,7 +22,7 @@ cd cryptonotewallet
 mkdir build && cd build && cmake .. && make
 ```
 
-The executable is now in the buld directory.
+The executable is now in the build directory.
 For a faster build, you can add -jX to the end of the make instruction, where X is the number of threads to use. Example: `make -j8`, for 4 cores with 2 threads each.
 You may also want to run `make clean` after to remove the build files, which are all stored under the build directory.
 
