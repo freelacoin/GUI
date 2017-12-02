@@ -20,9 +20,9 @@ cd ~
 
 sudo apt-get install build-essential git cmake libboost1.58-all-dev qt5-default qttools5-dev-tools
 
-git clone https://github.com/freelacoin/GUI.git cryptonotewallet
+git clone https://github.com/freelacoin/GUI.git freelabit
 
-cd cryptonotewallet
+cd freelabit
 
 mkdir build && cd build && cmake .. && make
 ```
